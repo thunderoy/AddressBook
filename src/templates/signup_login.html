@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ title }}</title>
+</head>
+<body>
+	<center>
+		<h2><u>AddressBook</u></h2><hr>
+		<form action='' method='post'>
+			{% csrf_token %}
+			{{ form.as_p }}
+			<input type="submit" value="{{ title }}" />
+		</form>
+		{% if title == 'Login' %}
+			<p>New User? <a href="/register/">Register</a></p>
+		{% else %}
+			<p>Already a User? <a href="/login/">Login</a></p>
+		{% endif %}
+	</center>
+</body>
+</html>

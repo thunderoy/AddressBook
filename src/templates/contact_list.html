@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact List</title>
+</head>
+<body>
+	<center>
+		<h2><u>AddressBook</u></h2>
+		<form action="" method="get">
+			<button type="submit" formaction="/create/">New</button>
+			<button type="submit" formaction="/logout/">Logout</button>
+		</form>
+	</center>
+	<hr>
+	{% for i in list %}
+	    <ul>
+			<li><p>Full Name: {{ i.full_name }}</p></li>
+			<li><p>Address: {{ i.address }}</p></li>
+			<li><p>Phone: {{ i.phone_number }}</p></li>
+			<li><p>Email: {{ i.email }}</p></li>
+			<li><p>Zip code: {{ i.zip_code }}</p></li>
+		</ul>
+		<form action="" method="get">
+			<button type="submit" formaction="/contacts/{{ i.id }}">Edit</button>
+			<button type="submit" formaction="/contacts/{{ i.id }}/delete">Delete</button>
+		</form>
+		<hr>
+	{% endfor %}
+</body>
+</html>

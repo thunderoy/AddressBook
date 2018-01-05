@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ title }}</title>
+</head>
+<body>
+	<center>
+		<h2><u>AddressBook</u></h2>
+	    <form action="" method="get">
+	    	{% if title == 'Update' %}
+				<button type="submit" formaction="/create/">New</button>
+			{% endif %}
+			<button type="submit" formaction="/contacts/">Show All</button>
+			<button type="submit" formaction="/logout/">Logout</button>
+		</form>
+	</center>
+	<hr>
+    <form action='', method='post'>
+    	{% csrf_token %}
+    	{{ form.as_p }}
+    	<input type="submit" value="{{ title }}" />
+    </form>
+</body>
+</html>
