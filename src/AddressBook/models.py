@@ -9,7 +9,7 @@ class Contact(models.Model):
 
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	full_name = models.CharField(max_length=100)
-	address = models.CharField(max_length=100)
+	address = models.CharField(max_length=1000)
 
     # phone = models.IntegerField()
 	phone_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '9999999999'. Exactly 10 digits allowed.")

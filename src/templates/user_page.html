@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<title>{{ Username }}</title>
 </head>
 <body>
+	<br>
 	<center>
-		<h2><u>AddressBook</u></h2>
+		<h2>AddressBook</h2><br><br><br>
 		<form action="" method="get">
-			<button type="submit" formaction="/create/">New</button>
-			<button type="submit" formaction="/contacts/">Show All</button>
-			<button type="submit" formaction="/logout/">Logout</button>
+			<button type="submit" class="btn btn-primary" formaction="/create/">New</button>
+			<button type="submit" class="btn btn-primary" formaction="/contacts/">Show All</button>
+			<button type="submit" class="btn btn-primary" formaction="/logout/">Logout</button>
 		</form>
 	</center>
 </body>
