@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 
 EMAIL_HOST = 'smtp.email-host-provider-domain.com'
 EMAIL_HOST_USER = 'yourusername@youremail.com'
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_PASSWORD = 'yourpassword'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'Your Name <you@email.com>'
@@ -32,7 +32,7 @@ MANAGERS = ADMINS
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', 'f!$^&4^rme(*v9xt@o449jw2@m2pq21u^aydo8v$xtd@-vmb97')
+SECRET_KEY = 'f!$^&4^rme(*v9xt@o449jw2@m2pq21u^aydo8v$xtd@-vmb97'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
